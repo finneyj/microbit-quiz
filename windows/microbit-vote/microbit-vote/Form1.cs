@@ -41,6 +41,7 @@ namespace microbit_vote
         Thread t, scanner, advertiser;
         string quizId = "QZ00";
         bool quizRunning = false;
+        Mutex serialTx = new Mutex();
 
         List<Vote> votes = new List<Vote>();
 
@@ -189,9 +190,7 @@ namespace microbit_vote
                         }
 
                         string cmd = "ack:" + s.Substring(4) + ";";
-                        //string cmd = "ack:" + p[1] + ":" + p[2] + ":" + p[3] + ":" + p[4] + ";";
-                        Console.WriteLine(cmd);
-                        port.Write(cmd);
+                        this.sendSerialCommand(cmd);
                     }
                 }
                 catch (Exception e) {Thread.Sleep(100); }
@@ -288,7 +287,7 @@ namespace microbit_vote
 
             while (quizRunning)
             {
-                port.Write(cmd);
+                this.sendSerialCommand(cmd);
                 Thread.Sleep(1000);
             }
         }
@@ -296,6 +295,20 @@ namespace microbit_vote
         private void comportListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.connectButton.Enabled = true;
+        }
+
+        private void sendSerialCommand(string cmd)
+        {
+            serialTx.WaitOne();
+
+            try
+            {
+                if (port != null && port.IsOpen)
+                port.Write(cmd);
+            }
+            catch (Exception e) { Thread.Sleep(100); }
+
+            serialTx.ReleaseMutex();
         }
     }
 }
