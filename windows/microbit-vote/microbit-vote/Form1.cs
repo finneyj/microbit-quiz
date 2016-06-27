@@ -41,6 +41,7 @@ namespace microbit_vote
         Thread t, scanner, advertiser;
         string quizId = "QZ00";
         bool quizRunning = false;
+        bool appExiting = false;
         Mutex serialTx = new Mutex();
 
         List<Vote> votes = new List<Vote>();
@@ -119,7 +120,7 @@ namespace microbit_vote
         {
             string[] ports = SerialPort.GetPortNames();
 
-            while (ports.Length == 0)
+            while (ports.Length == 0 && !appExiting)
             {
                 Thread.Sleep(1000);
                 ports = SerialPort.GetPortNames();
@@ -139,7 +140,7 @@ namespace microbit_vote
             port.StopBits = StopBits.One;
             port.Parity = Parity.None;
 
-            port.ReadTimeout = SerialPort.InfiniteTimeout;
+            port.ReadTimeout = 1000;
             port.Open();
 
             t = new System.Threading.Thread(new ThreadStart(serialListener));
@@ -161,7 +162,7 @@ namespace microbit_vote
         {
             string s = "";
             char[] delims = { ';', ':' };
-            while (true)
+            while (!appExiting)
             {
                 try
                 {
@@ -193,7 +194,8 @@ namespace microbit_vote
                         this.sendSerialCommand(cmd);
                     }
                 }
-                catch (Exception e) {Thread.Sleep(100); }
+                catch (TimeoutException t) { }
+                catch (Exception e) { Thread.Sleep(100); }
             }
         }
 
@@ -285,11 +287,16 @@ namespace microbit_vote
         {
             string cmd = "set:" + quizId + ":1:" + this.possibleAnswerListBox.Items.Count + ";";
 
-            while (quizRunning)
+            while (quizRunning && !appExiting)
             {
                 this.sendSerialCommand(cmd);
                 Thread.Sleep(1000);
             }
+        }
+
+        private void microbitVoteForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.appExiting = true;
         }
 
         private void comportListBox_SelectedIndexChanged(object sender, EventArgs e)

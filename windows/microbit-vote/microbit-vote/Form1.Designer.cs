@@ -189,6 +189,7 @@
             this.Controls.Add(this.comportListBox);
             this.Name = "microbitVoteForm";
             this.Text = "micro:bit vote!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.microbitVoteForm_FormClosing);
             this.Load += new System.EventHandler(this.microbitVoteForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
