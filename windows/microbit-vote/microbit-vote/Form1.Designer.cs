@@ -47,7 +47,7 @@
             // comportListBox
             // 
             this.comportListBox.FormattingEnabled = true;
-            this.comportListBox.Location = new System.Drawing.Point(1317, 633);
+            this.comportListBox.Location = new System.Drawing.Point(1196, 435);
             this.comportListBox.Name = "comportListBox";
             this.comportListBox.Size = new System.Drawing.Size(120, 95);
             this.comportListBox.TabIndex = 3;
@@ -57,7 +57,7 @@
             // connectButton
             // 
             this.connectButton.Enabled = false;
-            this.connectButton.Location = new System.Drawing.Point(1317, 747);
+            this.connectButton.Location = new System.Drawing.Point(1196, 569);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(120, 44);
             this.connectButton.TabIndex = 4;
@@ -73,7 +73,7 @@
             this.possibleAnswerListBox.ItemHeight = 37;
             this.possibleAnswerListBox.Location = new System.Drawing.Point(50, 77);
             this.possibleAnswerListBox.Name = "possibleAnswerListBox";
-            this.possibleAnswerListBox.Size = new System.Drawing.Size(1040, 633);
+            this.possibleAnswerListBox.Size = new System.Drawing.Size(1004, 448);
             this.possibleAnswerListBox.TabIndex = 5;
             // 
             // questionTextBox
@@ -84,13 +84,13 @@
             this.questionTextBox.ForeColor = System.Drawing.Color.Yellow;
             this.questionTextBox.Location = new System.Drawing.Point(50, 19);
             this.questionTextBox.Name = "questionTextBox";
-            this.questionTextBox.Size = new System.Drawing.Size(1040, 37);
+            this.questionTextBox.Size = new System.Drawing.Size(1004, 37);
             this.questionTextBox.TabIndex = 6;
             this.questionTextBox.Text = "Should the UK be a part of the European Union?";
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(1126, 612);
+            this.clearButton.Location = new System.Drawing.Point(1090, 435);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 43);
             this.clearButton.TabIndex = 7;
@@ -100,7 +100,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(1126, 747);
+            this.addButton.Location = new System.Drawing.Point(1089, 569);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(76, 44);
             this.addButton.TabIndex = 8;
@@ -110,7 +110,7 @@
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(1126, 666);
+            this.removeButton.Location = new System.Drawing.Point(1090, 484);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(75, 44);
             this.removeButton.TabIndex = 9;
@@ -121,9 +121,9 @@
             // newAnswerBox
             // 
             this.newAnswerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newAnswerBox.Location = new System.Drawing.Point(50, 747);
+            this.newAnswerBox.Location = new System.Drawing.Point(50, 569);
             this.newAnswerBox.Name = "newAnswerBox";
-            this.newAnswerBox.Size = new System.Drawing.Size(1040, 44);
+            this.newAnswerBox.Size = new System.Drawing.Size(1004, 44);
             this.newAnswerBox.TabIndex = 10;
             this.newAnswerBox.Text = "A: YES!";
             // 
@@ -135,9 +135,9 @@
             this.startVoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.startVoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startVoteButton.ForeColor = System.Drawing.Color.White;
-            this.startVoteButton.Location = new System.Drawing.Point(1127, 77);
+            this.startVoteButton.Location = new System.Drawing.Point(1091, 77);
             this.startVoteButton.Name = "startVoteButton";
-            this.startVoteButton.Size = new System.Drawing.Size(310, 191);
+            this.startVoteButton.Size = new System.Drawing.Size(225, 155);
             this.startVoteButton.TabIndex = 11;
             this.startVoteButton.Text = "START VOTE!";
             this.startVoteButton.UseVisualStyleBackColor = false;
@@ -151,9 +151,9 @@
             this.seeResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.seeResultsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seeResultsButton.ForeColor = System.Drawing.Color.White;
-            this.seeResultsButton.Location = new System.Drawing.Point(1126, 306);
+            this.seeResultsButton.Location = new System.Drawing.Point(1090, 257);
             this.seeResultsButton.Name = "seeResultsButton";
-            this.seeResultsButton.Size = new System.Drawing.Size(310, 191);
+            this.seeResultsButton.Size = new System.Drawing.Size(226, 155);
             this.seeResultsButton.TabIndex = 12;
             this.seeResultsButton.Text = "VIEW RESULTS!";
             this.seeResultsButton.UseVisualStyleBackColor = false;
@@ -164,7 +164,7 @@
             this.resultTotal.AutoSize = true;
             this.resultTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultTotal.ForeColor = System.Drawing.Color.LimeGreen;
-            this.resultTotal.Location = new System.Drawing.Point(1126, 19);
+            this.resultTotal.Location = new System.Drawing.Point(1090, 19);
             this.resultTotal.Name = "resultTotal";
             this.resultTotal.Size = new System.Drawing.Size(214, 37);
             this.resultTotal.TabIndex = 13;
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1457, 815);
+            this.ClientSize = new System.Drawing.Size(1350, 660);
             this.Controls.Add(this.resultTotal);
             this.Controls.Add(this.seeResultsButton);
             this.Controls.Add(this.startVoteButton);

@@ -50,7 +50,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.resultsChart.Series.Add(series1);
-            this.resultsChart.Size = new System.Drawing.Size(1357, 529);
+            this.resultsChart.Size = new System.Drawing.Size(1004, 529);
             this.resultsChart.TabIndex = 0;
             this.resultsChart.Text = "chart1";
             // 
@@ -62,7 +62,7 @@
             this.questionTextBox.ForeColor = System.Drawing.Color.Yellow;
             this.questionTextBox.Location = new System.Drawing.Point(50, 21);
             this.questionTextBox.Name = "questionTextBox";
-            this.questionTextBox.Size = new System.Drawing.Size(1357, 37);
+            this.questionTextBox.Size = new System.Drawing.Size(1004, 37);
             this.questionTextBox.TabIndex = 7;
             this.questionTextBox.Text = "Question";
             // 
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1456, 629);
+            this.ClientSize = new System.Drawing.Size(1113, 660);
             this.Controls.Add(this.questionTextBox);
             this.Controls.Add(this.resultsChart);
             this.Name = "ResultGraph";
