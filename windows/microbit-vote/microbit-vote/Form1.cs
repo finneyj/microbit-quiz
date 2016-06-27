@@ -200,8 +200,11 @@ namespace microbit_vote
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            this.possibleAnswerListBox.Items.Add(this.newAnswerBox.Text);
-            this.newAnswerBox.Clear();
+            if (this.newAnswerBox.Text.Trim().Length > 0)
+            {
+                this.possibleAnswerListBox.Items.Add(this.newAnswerBox.Text);
+                this.newAnswerBox.Clear();
+            }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
