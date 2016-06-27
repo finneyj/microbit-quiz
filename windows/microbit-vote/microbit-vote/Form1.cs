@@ -182,7 +182,7 @@ namespace microbit_vote
                                 unique = false;
                         }
 
-                        if (unique)
+                        if (unique && quizRunning)
                         {
                             votes.Add(v);
                             this.SetText("VOTES IN: " + votes.Count);
